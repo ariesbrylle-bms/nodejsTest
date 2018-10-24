@@ -47,15 +47,17 @@ body
 
                 form(method="post"  id="myForm" class="form" action="/notes_add")
                     input(type="hidden" name="id" id="id" class="form-control")
-                    div(class="col-md-6 form-group")
-                        label(for="title") Title:
+                    div(class="col-md-12 form-group")
+                        label(for="title") Title
                         input(type="text" name="title" id="title" class="form-control" )
                     div(class="col-md-12 form-group")
-                        label(for="description") Description:
+                        label(for="description") Description
                         textarea(type="text" name="description" id="description" )
                     
                     div(class="col-md-6 form-group")
-                        button(type="submit" id="submit" class="btn btn-success") Submit
+                        button(type="submit" id="submit" class="btn btn-primary") Add Note
+                        span 
+                        button#clearBtn(type="button" class="btn btn-default") Clear
                 
                 div(class="col-md-12 form-group")
                     table(class="table table-bordered")
@@ -70,7 +72,7 @@ body
                                     td=n.title
                                     td!=n.description
                                     td
-                                        button(type="button" class="btn btn-primary" onclick="getDetails("+n.id+")") Edit 
+                                        button(type="button" class="btn btn-success" onclick="getDetails("+n.id+")") Edit 
                                         span 
                                         button(type="button" class="btn btn-danger" onclick="deleteTask("+n.id+")") Delete
     script(src='/js/main.js')
