@@ -23,7 +23,8 @@
         "open": "0.0.5",
         "opn": "^5.4.0",
         "pug": "^2.0.3",
-        "simple-json-store": "0.0.1"
+        "simple-json-store": "0.0.1",
+        "vue": "^2.5.17"
     },
     "devDependencies": {
         "eslint": "^5.7.0",

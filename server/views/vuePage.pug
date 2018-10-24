@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Vuejs</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
+  
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Notes</h1>
+  p My simple nodejs and vuejs application
+</div>
+  
+<div class="container" id="todoVue">
+  <div class="row">
+    div(class="col-md-12 card")
+      div.card-body
+        form(method="post" id="myForm" class="form" v-on:submit.prevent="onSubmit")
+          input(type="hidden" name="id" id="id" v-model="id" class="form-control")
+          div(class="col-md-12 form-group")
+              label(for="title") Title
+              input(type="text" name="title" id="title" v-model="title" class="form-control" )
+          div(class="col-md-12 form-group")
+              label(for="description") Description
+              textarea(type="text" name="description" v-model="description" id="description" class="form-control")
+          
+          div(class="col-md-12 form-group")
+              button(type="submit" id="submit" class="btn btn-primary") Add Note
+              span &nbsp
+              button#clearBtn(type="button" class="btn btn-light") Clear
+        hr
+        table(class="table table-bordered")
+          thead
+              tr
+                  td Title
+                  td Description
+                  td Action
+          tbody
+            tr(v-for="note in notes")
+              td {{ note.title }}
+              td(v-html="note.description")
+              td 
+                button(type="button" class="btn btn-success" @click="getDetails(note.id)") Edit 
+                span &nbsp
+                button(type="button" class="btn btn-danger" @click="deleteTask(note.id)") Delete
+  </div>
+</div>
+
+</body>
+<script src="/vue/dist/vue.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/js/vue-custom.js"></script>
+</html>

@@ -12,6 +12,7 @@ const PORT = 3300;
 app.use(express.static('public'));
 app.set('views', path.join(__dirname, 'server/views'));
 app.set('view engine', 'pug');
+app.use('/vue', express.static(__dirname + '/node_modules/vue'));
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true })); // process
@@ -33,6 +34,10 @@ app.use('/notes', (req, res, next) => {
     console.log('Note Middleware only');
     next();
 }, noteRouter);
+
+app.get('/vue',(req,res) => {
+    res.render('vuePage', {});
+});
 
 app.listen(PORT, (err) => { // arrow function feature from ES6
     if (err){ console.log(err); }
