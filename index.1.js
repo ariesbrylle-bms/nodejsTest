@@ -36,7 +36,7 @@ app.get('/about', (req, res) => {
 });
 
 app.listen(port, (err) => {
-    if (err) {
+    if(err) {
         return console.error(err);
     }
     console.log(`Listening to port ${port}!`);
