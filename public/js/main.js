@@ -15,7 +15,7 @@
             var elem = inputs[i];
             elem.value = '';
         }
-        
+
         $('#description').summernote('code', '');
         $('#myForm').attr('action', '/notes_add');
     });

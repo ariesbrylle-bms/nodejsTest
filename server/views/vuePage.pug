@@ -6,18 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
+  link(href="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.css")
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.js")
   
 </head>
 <body>
 
 <div class="jumbotron text-center">
   <h1>Notes</h1>
-  p My simple nodejs and vuejs application
+  p My simple <b>Node.js</b> and <b>Vue.js</b> application
 </div>
   
 <div class="container" id="todoVue">
@@ -34,9 +36,9 @@
               textarea(type="text" name="description" v-model="description" id="description" class="form-control")
           
           div(class="col-md-12 form-group")
-              button(type="submit" id="submit" class="btn btn-primary") Add Note
+              button(type="submit" id="submit" class="btn btn-primary") {{ buttonLbl }}
               span &nbsp
-              button#clearBtn(type="button" class="btn btn-light") Clear
+              button#clearBtn(type="button" class="btn btn-light" v-on:click="clearData") Clear
         hr
         table(class="table table-bordered")
           thead

@@ -22,7 +22,7 @@ app.use(bodyParser.json()); // process json request
 app.use((req, res, next) => {
     console.log('Global middleware here.');
     req.viewModel = {
-        title : 'Note Taking Application'
+        title: 'Note Taking Application'
     };
     next();
 });
@@ -35,12 +35,12 @@ app.use('/notes', (req, res, next) => {
     next();
 }, noteRouter);
 
-app.get('/vue',(req,res) => {
+app.get('/vue', (req, res) => {
     res.render('vuePage', {});
 });
 
 app.listen(PORT, (err) => { // arrow function feature from ES6
-    if (err){ console.log(err); }
+    if(err){ console.log(err); }
     console.log(`Listening to port ${PORT}!`);
 });
 
