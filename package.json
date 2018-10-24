@@ -1,0 +1,35 @@
+{
+    "name": "nodetest",
+    "version": "1.0.0",
+    "description": "This is our activity for javascript and node.js lesson.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "./node_modules/nodemon/bin/nodemon.js index.js"
+    },
+    "keywords": [
+        "node.js",
+        "javascript",
+        "npm"
+    ],
+    "author": "Aries Brylle Ventura",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.18.0",
+        "body-parser": "^1.18.3",
+        "express": "^4.16.4",
+        "morgan": "^1.9.1",
+        "nodemon": "^1.18.4",
+        "open": "0.0.5",
+        "opn": "^5.4.0",
+        "pug": "^2.0.3",
+        "simple-json-store": "0.0.1"
+    },
+    "devDependencies": {
+        "eslint": "^5.7.0",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-plugin-import": "^2.14.0",
+        "eslint-plugin-jsx-a11y": "^6.1.2",
+        "eslint-plugin-react": "^7.11.1"
+    }
+}
