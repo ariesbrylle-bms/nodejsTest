@@ -8,7 +8,7 @@
 		{
 			"id": 2,
 			"title": "Assignment in IS 214",
-			"description": "<p>Please visit <b>myportal.upou.edu.ph.</b></p>"
+			"description": "<p>Please visit <b>google.com.</b></p>"
 		},
 		{
 			"id": 3,
@@ -22,8 +22,13 @@
 		},
 		{
 			"id": 5,
-			"title": "Sample",
+			"title": "Sample using vuejs",
 			"description": "yey!"
+		},
+		{
+			"id": 6,
+			"title": "Blockchain Activity",
+			"description": "Create CRUD using nodejs and vuejs"
 		}
 	]
 }
