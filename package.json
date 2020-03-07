@@ -20,7 +20,7 @@
         "express": "^4.16.4",
         "morgan": "^1.9.1",
         "nodemon": "^1.18.4",
-        "open": "0.0.5",
+        "open": "6.0.0",
         "opn": "^5.4.0",
         "pug": "^2.0.3",
         "simple-json-store": "0.0.1",
