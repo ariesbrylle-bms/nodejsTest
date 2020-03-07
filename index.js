@@ -3,9 +3,9 @@ const bodyParser = require('body-parser'); // module and middleware
 const noteRouter = require('./server/routes/notesRouter');
 const aboutRouter = require('./server/routes/aboutRouter');
 const indexRouter = require('./server/routes/indexRouter');
-const oldwayRouter = require('./server/routes/oldwayRouter');
+const quotesRouter = require('./server/routes/quoteRouter');
+
 const path = require('path');
-const morgan = require('morgan');
 const app = express();
 const PORT = 3300;
 
@@ -14,7 +14,7 @@ app.set('views', path.join(__dirname, 'server/views'));
 app.set('view engine', 'pug');
 app.use('/vue', express.static(__dirname + '/node_modules/vue'));
 
-app.use(morgan('dev'));
+//app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true })); // process
 app.use(bodyParser.json()); // process json request
 
@@ -28,12 +28,17 @@ app.use((req, res, next) => {
 });
 
 app.use('/', indexRouter);
-app.use('/old_way', oldwayRouter);
+// app.use('/old_way', oldwayRouter);
 app.use('/about', aboutRouter);
 app.use('/notes', (req, res, next) => {
     console.log('Note Middleware only');
     next();
 }, noteRouter);
+
+app.use('/quotes', (req, res, next) => {
+    console.log('Note Middleware only');
+    next();
+}, quotesRouter);
 
 app.get('/vue', (req, res) => {
     res.render('vuePage', {});

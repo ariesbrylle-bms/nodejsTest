@@ -1,0 +1,29 @@
+{
+	"quotes": [
+		{
+			"id": 1,
+			"author": "Vivian Greene",
+			"text": "Life isn't about waiting for the storm to pass. It's about learning how to dance in the rain."
+		},
+		{
+			"id": 2,
+			"author": "haha",
+			"text": "new title"
+		},
+		{
+			"id": 3,
+			"author": "Aries",
+			"text": "To live is to love."
+		},
+		{
+			"id": 4,
+			"author": "Sample",
+			"text": "This is quoute"
+		},
+		{
+			"id": 5,
+			"author": "Postman",
+			"text": "To live is to love."
+		}
+	]
+}

@@ -21,14 +21,9 @@
 			"description": "This is to do list."
 		},
 		{
-			"id": 5,
-			"title": "Sample using vuejs",
-			"description": "yey!"
-		},
-		{
 			"id": 6,
-			"title": "Blockchain Activity",
-			"description": "Create CRUD using nodejs and vuejs"
+			"title": "new title",
+			"description": "haha"
 		}
 	]
 }
